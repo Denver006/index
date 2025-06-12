@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery - Auto Repair</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 2rem;
+}
+.modal {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.8);
+z-index: 1000;
+}
+.slider-container {
+position: relative;
+width: 80%;
+height: 80%;
+margin: 5% auto;
+background: white;
+padding: 2rem;
+border-radius: 8px;
+}
+</style>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#3B82F6',
+secondary: '#10B981'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+</head>
+<body class="bg-gray-50">
+<nav class="bg-white shadow-lg fixed w-full z-50">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<a href="/" class="font-['Pacifico'] text-2xl text-primary">logo</a>
+<div class="hidden md:flex items-center space-x-8 ml-10">
+<a href="Home.html" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm">Home</a>
+<a href="Home.html#Services" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm">Services</a>
+<a href="gallery.html" class="text-primary font-medium px-3 py-2 rounded-md text-sm">Gallery</a>
+<a href="About.html#Contact" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm">Contact</a>
+<a href="About.html" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm">About Us</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 rounded-full hover:bg-gray-100">
+<i class="ri-search-line text-gray-600"></i>
+</button>
+<button class="p-2 rounded-full hover:bg-gray-100">
+<i class="ri-user-line text-gray-600"></i>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-20 pb-12 px-4 max-w-7xl mx-auto">
+<div class="mb-8">
+<h1 class="text-3xl font-bold text-gray-900 mb-4">Our Work Gallery</h1>
+<div class="flex flex-wrap gap-4 mb-8">
+<button class="px-4 py-2 bg-primary text-white rounded-button">Recent Projects</button>
+</div>
+</div>
+<div class="gallery-grid">
+<div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openModal(1)">
+<img src="cleo.jpg" alt="Before repair" class="w-full h-48 object-cover">
+<img src="after.jpg" alt="After repair" class="w-full h-48 object-cover">
+<div class="p-4">
+<h3 class="text-lg font-semibold mb-2">Renualt Restoration</h3>
+<p class="text-gray-600 text-sm">Complete body restoration and paint correction</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openModal(2)">
+<img src="toyota.jpg" alt="Before repair" class="w-full h-48 object-cover">
+<img src="toya.jpg" alt="After repair" class="w-full h-48 object-cover">
+<div class="p-4">
+<h3 class="text-lg font-semibold mb-2"> Toyota Repair</h3>
+<p class="text-gray-600 text-sm">Collision repair and paint matching</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openModal(3)">
+<img src="truck.jpg" alt="Before repair" class="w-full h-48 object-cover">
+<img src="done.jpg" alt="After repair" class="w-full h-48 object-cover">
+<div class="p-4">
+<h3 class="text-lg font-semibold mb-2">Nissan Hard Body</h3>
+<p class="text-gray-600 text-sm">Full restoration and modernization</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openModal(4)">
+<img src="model.jpg" alt="Before repair" class="w-full h-48 object-cover">
+<img src="ready.jpg" alt="After repair" class="w-full h-48 object-cover">
+<div class="p-4">
+<h3 class="text-lg font-semibold mb-2">KIA </h3>
+<p class="text-gray-600 text-sm">Vintage restoration and modernization</p>
+</div>
+</div>
+</div>
+</main>
+<div class="bg-gradient-to-r from-primary/10 to-secondary/10 py-12 mt-16">
+<div class="max-w-7xl mx-auto px-4">
+<div class="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex-1">
+<h2 class="text-2xl font-bold text-gray-900 mb-4">Follow Our Transformation Journey!</h2>
+<p class="text-gray-600 mb-6">Want to see more incredible before & after transformations? Follow us on social media where we share weekly updates of our latest restoration projects, behind-the-scenes content, and exclusive looks at our craft!</p>
+<div class="flex flex-wrap gap-4">
+<a href="https://www.facebook.com/share/16FA7Eibd9/?mibextid=wwXIfr" target="_blank" class="flex items-center gap-2 px-6 py-3 bg-[#1877F2] text-white rounded-button hover:bg-[#1877F2]/90 transition-colors">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-facebook-fill text-xl"></i>
+</div>
+<span class="font-medium">Follow on Facebook</span>
+</a>
+<a href="https://www.instagram.com/avishals_panelbeaters?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="flex items-center gap-2 px-6 py-3 bg-[#E4405F] text-white rounded-button hover:bg-[#E4405F]/90 transition-colors">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-instagram-fill text-xl"></i>
+</div>
+<span class="font-medium">Follow us on Instagram</span>
+</a>
+</div>
+</div>
+<div class="flex-shrink-0 w-64 h-64 relative">
+<img src="https://public.readdy.ai/ai/img_res/d920a13c320c22fcbe86462edb3a3b81.jpg" alt="Social Media Content" class="w-full h-full object-cover rounded-lg">
+<div class="absolute -top-3 -right-3 bg-secondary text-white px-4 py-2 rounded-full text-sm font-medium">
+Weekly Updates
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="imageModal" class="modal">
+<div class="slider-container">
+<button onclick="closeModal()" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900">
+<i class="ri-close-line text-2xl"></i>
+</button>
+<div class="flex h-full">
+<div class="w-3/4 relative">
+<div id="modalImage" class="h-full flex items-center justify-center">
+<img src="" alt="Modal image" class="max-h-full max-w-full object-contain">
+</div>
+<button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md">
+<i class="ri-arrow-left-s-line text-xl"></i>
+</button>
+<button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md">
+<i class="ri-arrow-right-s-line text-xl"></i>
+</button>
+</div>
+<div class="w-1/4 p-6 bg-gray-50">
+<h3 id="modalTitle" class="text-xl font-bold mb-4"></h3>
+<p id="modalDescription" class="text-gray-600 mb-6"></p>
+<div class="space-y-4">
+<div>
+<h4 class="font-semibold mb-2">Service Details</h4>
+<ul class="text-sm text-gray-600 space-y-2">
+<li>• Complete body work</li>
+<li>• Custom paint job</li>
+<li>• Interior restoration</li>
+<li>• Mechanical updates</li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold mb-2">Timeline</h4>
+<p class="text-sm text-gray-600">Duration: 6 weeks</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+const galleryData = [
+{
+title: "Ferrari 458 Restoration",
+description: "Complete restoration of a Ferrari 458 including body work, paint correction, and interior refurbishment.",
+beforeImage: "https://readdy.ai/api/search-image?query=professional car repair shop, showing a damaged red sports car before repair, high-end automotive workshop environment, clean and modern setting, dramatic lighting&width=600&height=400&seq=1&orientation=landscape",
+afterImage: "https://readdy.ai/api/search-image?query=professional car repair shop, showing a perfectly restored red sports car after repair, high-end automotive workshop environment, clean and modern setting, dramatic lighting&width=600&height=400&seq=2&orientation=landscape"
+},
+{
+title: "Mercedes S-Class Repair",
+description: "Collision repair and paint matching for a Mercedes S-Class, restoring it to showroom condition.",
+beforeImage: "https://readdy.ai/api/search-image?query=professional car repair shop, showing a damaged black luxury sedan before repair, dent and scratch visible, clean workshop environment&width=600&height=400&seq=3&orientation=landscape",
+afterImage: "https://readdy.ai/api/search-image?query=professional car repair shop, showing a perfectly restored black luxury sedan after repair, pristine condition, clean workshop environment&width=600&height=400&seq=4&orientation=landscape"
+},
+{
+title: "Classic Mustang Revival",
+description: "Complete restoration of a classic Mustang, including mechanical rebuilding and custom modifications.",
+beforeImage: "https://readdy.ai/api/search-image?query=professional car repair shop, showing a classic muscle car with worn paint before restoration, vintage automotive, workshop setting&width=600&height=400&seq=5&orientation=landscape",
+afterImage: "https://readdy.ai/api/search-image?query=professional car repair shop, showing a perfectly restored classic muscle car after restoration, gleaming paint, vintage automotive, workshop setting&width=600&height=400&seq=6&orientation=landscape"
+},
+{
+title: "Porsche 911 Classic",
+description: "Complete restoration of a vintage Porsche 911, including rust removal, body work, mechanical overhaul and period-correct modifications.",
+beforeImage: "https://readdy.ai/api/search-image?query=professional car repair shop, showing a damaged vintage Porsche 911 with rust and dents before restoration, classic car workshop environment, natural lighting&width=600&height=400&seq=7&orientation=landscape",
+afterImage: "https://readdy.ai/api/search-image?query=professional car repair shop, showing a perfectly restored vintage Porsche 911 after complete restoration, gleaming paint and chrome, classic car workshop environment, natural lighting&width=600&height=400&seq=8&orientation=landscape"
+}
+];
+function openModal(index) {
+const modal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage').querySelector('img');
+const modalTitle = document.getElementById('modalTitle');
+const modalDescription = document.getElementById('modalDescription');
+const data = galleryData[index - 1];
+modalImage.src = data.afterImage;
+modalTitle.textContent = data.title;
+modalDescription.textContent = data.description;
+modal.style.display = 'block';
+document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+const modal = document.getElementById('imageModal');
+modal.style.display = 'none';
+document.body.style.overflow = 'auto';
+}
+window.onclick = function(event) {
+const modal = document.getElementById('imageModal');
+if (event.target == modal) {
+closeModal();
+}
+}
+</script>
+</body>
+</html>
