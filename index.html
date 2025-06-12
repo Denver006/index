@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avishal Panel Beating & Auto Repair</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#1A237E',
+secondary: '#C0C0C0'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.service-card:hover { transform: translateY(-5px); }
+.testimonial-card:hover { transform: scale(1.02); }
+.nav-link { position: relative; }
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -2px;
+left: 0;
+background-color: #1A237E;
+transition: width 0.3s;
+}
+.nav-link:hover::after { width: 100%; }
+</style>
+</head>
+<body class="bg-white">
+<header class="fixed w-full top-0 bg-white shadow-md z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary">Avishal PanelBeaters </a>
+</div>
+<nav class="hidden md:flex space-x-8">
+<a href="#" class="nav-link text-gray-700 hover:text-primary">Home</a>
+<a href="About.html" class="nav-link text-gray-700 hover:text-primary">About</a>
+<a href="#Services" class="nav-link text-gray-700 hover:text-primary">Services</a>
+<a href= "gallery.html" class="nav-link text-gray-700 hover:text-primary">Gallery</a>
+<a href="About.html#Contact" class="nav-link text-gray-700 hover:text-primary">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
+   <a class="whatsapp-contact" href="https://wa.me/27614774406" target="_blank">
+        <i class="fab fa-whatsapp"></i> Click here to chat on Whatsapp
+    </a>
+<a href="tel:0614774406" class="hidden md:flex items-center text-primary">
+<i class="ri-phone-line ri-lg mr-2"></i>
+</a>
+<button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap cursor-pointer">
+Book Now
+</button>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center cursor-pointer">
+<i class="ri-menu-line ri-2x text-primary"></i>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-16">
+<section class="relative h-[800px] bg-cover bg-center overflow-hidden" style="background-image: url('https://public.readdy.ai/ai/img_res/aeb66f57ca9c310711b3377ead00a522.jpg')">
+<div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
+<div class="relative max-w-7xl mx-auto px-4 h-full flex items-center">
+<div class="max-w-3xl text-white">
+<h1 class="text-7xl font-bold mb-6 leading-tight">Avishal Panel Beaters</h1>
+<h2 class="text-3xl font-light mb-8" >Quality Without Compromise</h2>
+<p class="text-xl mb-12 leading-relaxed">. We bring your vehicle back to its original glory with meticulous attention to detail.</p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button onclick="showQuoteForm()" class="group bg-primary text-white px-10 py-4 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap cursor-pointer text-lg font-semibold flex items-center justify-center">
+Get Free Quote
+<i class="ri-arrow-right-line ml-2 group-hover:translate-x-1 transition-transform"></i>
+</button>
+<button onclick="showBookingCalendar()" class="group bg-white text-primary px-10 py-4 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap cursor-pointer text-lg font-semibold flex items-center justify-center">
+Book Appointment
+<i class="ri-calendar-line ml-2 group-hover:translate-x-1 transition-transform"></i>
+</button>
+</div>
+<div class="mt-16 grid grid-cols-3 gap-8">
+<div class="text-center">
+<div class="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-shield-check-line ri-2x"></i>
+</div>
+<p class="font-semibold">Certified Experts</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-timer-line ri-2x"></i>
+</div>
+<p class="font-semibold">Quick Turnaround</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-medal-line ri-2x"></i>
+</div>
+<p class="font-semibold">Lifetime Warranty</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div id="quoteFormModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+<div class="bg-white rounded-lg max-w-2xl w-full mx-4">
+<div class="p-8">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-2xl font-bold">Get Your Free Quote</h3>
+<button onclick="closeQuoteForm()" class="text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-2x"></i>
+</button>
+</div>
+<form id="quoteForm" class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+<input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" required>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+<input type="tel" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" required>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Vehicle Name/Model</label>
+<input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" required>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Service Required</label>
+<select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" required>
+<option value="">Select a service</option>
+<option value="panel-beating">Panel Beating</option>
+<option value="spray-painting">Spray Painting</option>
+<option value="accident-repair">Accident Repair</option>
+<option value="windscreen">Windscreen Services</option>
+<option value="dent-removal">Dent Removal</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Message (Optional)</label>
+<textarea class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent h-32" required></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap cursor-pointer">
+Submit Quote Request
+</button>
+</form>
+</div>
+</div>
+</div>
+<div id="bookingCalendarModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+<div class="bg-white rounded-lg max-w-2xl w-full mx-4">
+<div class="p-8">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-2xl font-bold">Book an Appointment</h3>
+<button onclick="closeBookingCalendar()" class="text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-2x"></i>
+</button>
+</div>
+<form id="bookingForm" class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Preferred Date</label>
+<input type="date" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" required>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Preferred Time</label>
+<select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" required>
+<option value="">Select a time</option>
+<option value="09:00">9:00 AM</option>
+<option value="10:00">10:00 AM</option>
+<option value="11:00">11:00 AM</option>
+<option value="13:00">1:00 PM</option>
+<option value="14:00">2:00 PM</option>
+<option value="15:00">3:00 PM</option>
+<option value="16:00">4:00 PM</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+<input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" required>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+<input type="tel" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" required>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Service Type</label>
+<select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" required>
+<option value="">Select a service</option>
+<option value="panel-beating">Panel Beating</option>
+<option value="spray-painting">Spray Painting</option>
+<option value="accident-repair">Accident Repair</option>
+<option value="windscreen">Windscreen Services</option>
+<option value="dent-removal">Dent Removal</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Additional Notes</label>
+<textarea class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent h-32"></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap cursor-pointer">
+Confirm Booking
+</button>
+</form>
+</div>
+</div>
+</div>
+<script>
+function showQuoteForm() {
+document.getElementById('quoteFormModal').classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+function closeQuoteForm() {
+document.getElementById('quoteFormModal').classList.add('hidden');
+document.body.style.overflow = '';
+}
+function showBookingCalendar() {
+document.getElementById('bookingCalendarModal').classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+function closeBookingCalendar() {
+document.getElementById('bookingCalendarModal').classList.add('hidden');
+document.body.style.overflow = '';
+}
+document.getElementById('quoteForm').addEventListener('submit', function(e) {
+e.preventDefault();
+// Add form submission logic here
+closeQuoteForm();
+// Show success message
+showSuccessMessage('Quote request submitted successfully! We\'ll get back to you within 24 hours.');
+});
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+e.preventDefault();
+// Add form submission logic here
+closeBookingCalendar();
+// Show success message
+showSuccessMessage('Booking confirmed! We\'ll see you at your scheduled time.');
+});
+function showSuccessMessage(message) {
+const successDiv = document.createElement('div');
+successDiv.className = 'fixed bottom-8 right-8 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in-up';
+successDiv.textContent = message;
+document.body.appendChild(successDiv);
+setTimeout(() => {
+successDiv.remove();
+}, 5000);
+}
+// Close modals when clicking outside
+document.getElementById('quoteFormModal').addEventListener('click', function(e) {
+if (e.target === this) {
+closeQuoteForm();
+}
+});
+document.getElementById('bookingCalendarModal').addEventListener('click', function(e) {
+if (e.target === this) {
+closeBookingCalendar();
+}
+});
+</script>
+<style>
+@keyframes fade-in-up {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+.animate-fade-in-up {
+animation: fade-in-up 0.3s ease-out;
+}
+</style>
+<section class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4" section id ="Services">Our Services</h2></section>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="service-card bg-white rounded-lg shadow-lg transition-all duration-300 flex overflow-hidden">
+<div class="w-1/2">
+<img src="avish.jpg" alt="Panel Beating" class="w-full h-full object-cover">
+</div>
+<div class="w-1/2 p-6 flex flex-col justify-center">
+<h3 class="text-xl font-bold mb-4">Panel Beating</h3>
+<p class="text-gray-600">Expert panel beating services to restore your vehicle's body to its original condition. Our certified technicians use state-of-the-art equipment for perfect results.</p>
+<button onclick="showServiceDetails(this)" data-service="panel-beating" class="mt-4 text-primary hover:text-opacity-80 flex items-center">
+</button>
+</div>
+</div>
+<div class="service-card bg-white rounded-lg shadow-lg transition-all duration-300 flex overflow-hidden">
+<div class="w-1/2">
+<img src="seya.jpg" alt="Spray Painting" class="w-full h-full object-cover">
+</div>
+<div class="w-1/2 p-6 flex flex-col justify-center">
+<h3 class="text-xl font-bold mb-4">Spray Painting</h3>
+<p class="text-gray-600">Professional automotive painting with color matching and premium finishes. We use high-quality materials for lasting results.</p>
+<button onclick="showServiceDetails(this)" data-service="spray-painting" class="mt-4 text-primary hover:text-opacity-80 flex items-center">
+</button>
+</div>
+</div>
+<div class="service-card bg-white rounded-lg shadow-lg transition-all duration-300 flex overflow-hidden">
+<div class="w-1/2">
+<img src="crash.jpg" alt="Accident Repair" class="w-full h-full object-cover">
+</div>
+<div class="w-1/2 p-6 flex flex-col justify-center">
+<h3 class="text-xl font-bold mb-4">Accident Repair</h3>
+<p class="text-gray-600">Comprehensive accident repair services with insurance claim assistance. We handle everything from minor dents to major collision repairs.</p>
+<button onclick="showServiceDetails(this)" data-service="accident-repair" class="mt-4 text-primary hover:text-opacity-80 flex items-center">
+</button>
+</div>
+</div>
+<div class="service-card bg-white rounded-lg shadow-lg transition-all duration-300 flex overflow-hidden">
+<div class="w-1/2">
+<img src="glass.jpg" alt="Windscreen Services" class="w-full h-full object-cover">
+</div>
+<div class="w-1/2 p-6 flex flex-col justify-center">
+<h3 class="text-xl font-bold mb-4">Windscreen Services</h3>
+<p class="text-gray-600">Professional windscreen removal and fitment with quality materials. Expert installation and repair of all types of auto glass.</p>
+<button onclick="showServiceDetails(this)" data-service="windscreen-services" class="mt-4 text-primary hover:text-opacity-80 flex items-center">
+</button>
+</div>
+</div>
+<div class="service-card bg-white rounded-lg shadow-lg transition-all duration-300 flex overflow-hidden">
+<div class="w-1/2">
+<img src="https://public.readdy.ai/ai/img_res/384b45ab21d0f274a82a4578c65457e8.jpg" alt="Dent Removals" class="w-full h-full object-cover">
+</div>
+<div class="w-1/2 p-6 flex flex-col justify-center">
+<h3 class="text-xl font-bold mb-4">Dent Removals</h3>
+<p class="text-gray-600">Specialized dent removal services to restore your vehicle's appearance. We use advanced techniques for seamless results.</p>
+<button onclick="showServiceDetails(this)" data-service="dent-removal" class="mt-4 text-primary hover:text-opacity-80 flex items-center">
+</button>
+</div>
+</div>
+<div class="service-card bg-white rounded-lg shadow-lg transition-all duration-300 flex overflow-hidden">
+<div class="w-1/2">
+<img src="https://public.readdy.ai/ai/img_res/3e129f949fde3e34bd8d696f8ac6ca68.jpg" alt="Touch Ups & Polishing" class="w-full h-full object-cover">
+</div>
+<div class="w-1/2 p-6 flex flex-col justify-center">
+<h3 class="text-xl font-bold mb-4">Touch Ups & Polishing</h3>
+<p class="text-gray-600">Minor repairs and professional polishing to maintain your vehicle's shine. We restore your car's paint to showroom condition.</p>
+<button onclick="showServiceDetails(this)" data-service="touch-ups" class="mt-4 text-primary hover:text-opacity-80 flex items-center">
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div id="serviceModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+<div class="bg-white rounded-lg max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl font-bold service-title"></h3>
+<button onclick="closeServiceModal()" class="text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-2x"></i>
+</button>
+</div>
+<div class="service-content"></div>
+</div>
+</div>
+</div>
+<script>
+const 7serviceDetails = {
+'panel-beating': {
+title: 'Panel Beating Services',
+content: `
+<div class="space-y-6">
+<img src="https://readdy.ai/api/search-image?query=professional panel beater working on car body repair, detailed work in modern workshop, high-end equipment&width=800&height=400&seq=10&orientation=landscape" alt="Panel Beating" class="w-full h-64 object-cover rounded-lg mb-4">
+<p class="text-gray-600">Our panel beating service is a specialized automotive repair process that focuses on restoring damaged vehicle body panels to their original condition. Our certified technicians use state-of-the-art equipment and techniques to:</p>
+<ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+<li>Repair dents, scratches, and collision damage</li>
+<li>Restore vehicle body panels to factory specifications</li>
+<li>Ensure proper panel alignment and gaps</li>
+<li>Maintain structural integrity of your vehicle</li>
+</ul>
+<h4 class="text-xl font-bold mt-6 mb-3">Our Process</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">1. Assessment</h5>
+<p class="text-gray-600">Thorough inspection and damage assessment</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">2. Planning</h5>
+<p class="text-gray-600">Detailed repair plan and cost estimation</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">3. Repair</h5>
+<p class="text-gray-600">Expert panel beating and restoration</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">4. Quality Check</h5>
+<p class="text-gray-600">Final inspection and quality assurance</p>
+</div>
+</div>
+</div>
+`
+},
+'spray-painting': {
+title: 'Spray Painting Services',
+content: `
+<div class="space-y-6">
+<img src="https://readdy.ai/api/search-image?query=professional automotive spray painting in modern paint booth, showing perfect finish on luxury car&width=800&height=400&seq=11&orientation=landscape" alt="Spray Painting" class="w-full h-64 object-cover rounded-lg mb-4">
+<p class="text-gray-600">Our professional spray painting service delivers flawless finishes using premium materials and advanced techniques. We specialize in:</p>
+<ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+<li>Custom color matching and mixing</li>
+<li>Full vehicle resprays</li>
+<li>Partial panel painting</li>
+<li>Clear coat application</li>
+</ul>
+<h4 class="text-xl font-bold mt-6 mb-3">Our Process</h4>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Surface Preparation</h5>
+<p class="text-gray-600">Thorough cleaning and sanding</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Paint Application</h5>
+<p class="text-gray-600">Multiple layers of premium paint</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Finishing</h5>
+<p class="text-gray-600">Clear coat and polishing</p>
+</div>
+</div>
+</div>
+`
+}
+// Add more services here
+};
+function showServiceDetails(button) {
+const serviceType = button.dataset.service;
+const modal = document.getElementById('serviceModal');
+const details = serviceDetails[serviceType];
+if (details) {
+modal.querySelector('.service-title').textContent = details.title;
+modal.querySelector('.service-content').innerHTML = details.content;
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+}
+function closeServiceModal() {
+const modal = document.getElementById('serviceModal');
+modal.classList.add('hidden');
+document.body.style.overflow = '';
+}
+// Close modal when clicking outside
+document.getElementById('serviceModal').addEventListener('click', function(e) {
+if (e.target === this) {
+closeServiceModal();
+}
+});
+</script>
+</div>
+<div class="service-card bg-white p-8 rounded-lg shadow-lg transition-all duration-300">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-paint-brush-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">Spray Painting</h3>
+<p class="text-gray-600">Professional automotive painting with color matching and premium finishes.</p>
+</div>
+<div id="serviceModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+<div class="bg-white rounded-lg max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl font-bold service-title"></h3>
+<button onclick="closeServiceModal()" class="text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-2x"></i>
+</button>
+</div>
+<div class="service-content"></div>
+</div>
+</div>
+</div>
+<script>
+const serviceDetails = {
+'panel-beating': {
+title: 'Panel Beating Services',
+content: `
+<div class="space-y-6">
+<img src="https://readdy.ai/api/search-image?query=professional panel beater working on car body repair, detailed work in modern workshop, high-end equipment&width=800&height=400&seq=10&orientation=landscape" alt="Panel Beating" class="w-full h-64 object-cover rounded-lg mb-4">
+<p class="text-gray-600">Our panel beating service is a specialized automotive repair process that focuses on restoring damaged vehicle body panels to their original condition. Our certified technicians use state-of-the-art equipment and techniques to:</p>
+<ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+<li>Repair dents, scratches, and collision damage</li>
+<li>Restore vehicle body panels to factory specifications</li>
+<li>Ensure proper panel alignment and gaps</li>
+<li>Maintain structural integrity of your vehicle</li>
+</ul>
+<h4 class="text-xl font-bold mt-6 mb-3">Our Process</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">1. Assessment</h5>
+<p class="text-gray-600">Thorough inspection and damage assessment</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">2. Planning</h5>
+<p class="text-gray-600">Detailed repair plan and cost estimation</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">3. Repair</h5>
+<p class="text-gray-600">Expert panel beating and restoration</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">4. Quality Check</h5>
+<p class="text-gray-600">Final inspection and quality assurance</p>
+</div>
+</div>
+</div>
+`
+},
+'spray-painting': {
+title: 'Spray Painting Services',
+content: `
+<div class="space-y-6">
+<img src="https://readdy.ai/api/search-image?query=professional automotive spray painting in modern paint booth, showing perfect finish on luxury car&width=800&height=400&seq=11&orientation=landscape" alt="Spray Painting" class="w-full h-64 object-cover rounded-lg mb-4">
+<p class="text-gray-600">Our professional spray painting service delivers flawless finishes using premium materials and advanced techniques. We specialize in:</p>
+<ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+<li>Custom color matching and mixing</li>
+<li>Full vehicle resprays</li>
+<li>Partial panel painting</li>
+<li>Clear coat application</li>
+</ul>
+<h4 class="text-xl font-bold mt-6 mb-3">Our Process</h4>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Surface Preparation</h5>
+<p class="text-gray-600">Thorough cleaning and sanding</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Paint Application</h5>
+<p class="text-gray-600">Multiple layers of premium paint</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Finishing</h5>
+<p class="text-gray-600">Clear coat and polishing</p>
+</div>
+</div>
+</div>
+`
+}
+// Add more services here
+};
+function showServiceDetails(button) {
+const serviceType = button.dataset.service;
+const modal = document.getElementById('serviceModal');
+const details = serviceDetails[serviceType];
+if (details) {
+modal.querySelector('.service-title').textContent = details.title;
+modal.querySelector('.service-content').innerHTML = details.content;
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+}
+function closeServiceModal() {
+const modal = document.getElementById('serviceModal');
+modal.classList.add('hidden');
+document.body.style.overflow = '';
+}
+// Close modal when clicking outside
+document.getElementById('serviceModal').addEventListener('click', function(e) {
+if (e.target === this) {
+closeServiceModal();
+}
+});
+</script>
+</div>
+<div class="service-card bg-white p-8 rounded-lg shadow-lg transition-all duration-300">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-car-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">Accident Repair</h3>
+<p class="text-gray-600">Comprehensive accident repair services with insurance claim assistance.</p>
+</div>
+<div id="serviceModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+<div class="bg-white rounded-lg max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl font-bold service-title"></h3>
+<button onclick="closeServiceModal()" class="text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-2x"></i>
+</button>
+</div>
+<div class="service-content"></div>
+</div>
+</div>
+</div>
+<script>
+const serviceDetails = {
+'panel-beating': {
+title: 'Panel Beating Services',
+content: `
+<div class="space-y-6">
+<img src="https://readdy.ai/api/search-image?query=professional panel beater working on car body repair, detailed work in modern workshop, high-end equipment&width=800&height=400&seq=10&orientation=landscape" alt="Panel Beating" class="w-full h-64 object-cover rounded-lg mb-4">
+<p class="text-gray-600">Our panel beating service is a specialized automotive repair process that focuses on restoring damaged vehicle body panels to their original condition. Our certified technicians use state-of-the-art equipment and techniques to:</p>
+<ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+<li>Repair dents, scratches, and collision damage</li>
+<li>Restore vehicle body panels to factory specifications</li>
+<li>Ensure proper panel alignment and gaps</li>
+<li>Maintain structural integrity of your vehicle</li>
+</ul>
+<h4 class="text-xl font-bold mt-6 mb-3">Our Process</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">1. Assessment</h5>
+<p class="text-gray-600">Thorough inspection and damage assessment</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">2. Planning</h5>
+<p class="text-gray-600">Detailed repair plan and cost estimation</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">3. Repair</h5>
+<p class="text-gray-600">Expert panel beating and restoration</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">4. Quality Check</h5>
+<p class="text-gray-600">Final inspection and quality assurance</p>
+</div>
+</div>
+</div>
+`
+},
+'spray-painting': {
+title: 'Spray Painting Services',
+content: `
+<div class="space-y-6">
+<img src="https://readdy.ai/api/search-image?query=professional automotive spray painting in modern paint booth, showing perfect finish on luxury car&width=800&height=400&seq=11&orientation=landscape" alt="Spray Painting" class="w-full h-64 object-cover rounded-lg mb-4">
+<p class="text-gray-600">Our professional spray painting service delivers flawless finishes using premium materials and advanced techniques. We specialize in:</p>
+<ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+<li>Custom color matching and mixing</li>
+<li>Full vehicle resprays</li>
+<li>Partial panel painting</li>
+<li>Clear coat application</li>
+</ul>
+<h4 class="text-xl font-bold mt-6 mb-3">Our Process</h4>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Surface Preparation</h5>
+<p class="text-gray-600">Thorough cleaning and sanding</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Paint Application</h5>
+<p class="text-gray-600">Multiple layers of premium paint</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Finishing</h5>
+<p class="text-gray-600">Clear coat and polishing</p>
+</div>
+</div>
+</div>
+`
+}
+// Add more services here
+};
+function showServiceDetails(button) {
+const serviceType = button.dataset.service;
+const modal = document.getElementById('serviceModal');
+const details = serviceDetails[serviceType];
+if (details) {
+modal.querySelector('.service-title').textContent = details.title;
+modal.querySelector('.service-content').innerHTML = details.content;
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+}
+function closeServiceModal() {
+const modal = document.getElementById('serviceModal');
+modal.classList.add('hidden');
+document.body.style.overflow = '';
+}
+// Close modal when clicking outside
+document.getElementById('serviceModal').addEventListener('click', function(e) {
+if (e.target === this) {
+closeServiceModal();
+}
+});
+</script>
+</div>
+<div class="service-card bg-white p-8 rounded-lg shadow-lg transition-all duration-300">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-window-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">Windscreen Services</h3>
+<p class="text-gray-600">Professional windscreen removal and fitment with quality materials.</p>
+</div>
+<div id="serviceModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+<div class="bg-white rounded-lg max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl font-bold service-title"></h3>
+<button onclick="closeServiceModal()" class="text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-2x"></i>
+</button>
+</div>
+<div class="service-content"></div>
+</div>
+</div>
+</div>
+<script>
+const serviceDetails = {
+'panel-beating': {
+title: 'Panel Beating Services',
+content: `
+<div class="space-y-6">
+<img src="https://readdy.ai/api/search-image?query=professional panel beater working on car body repair, detailed work in modern workshop, high-end equipment&width=800&height=400&seq=10&orientation=landscape" alt="Panel Beating" class="w-full h-64 object-cover rounded-lg mb-4">
+<p class="text-gray-600">Our panel beating service is a specialized automotive repair process that focuses on restoring damaged vehicle body panels to their original condition. Our certified technicians use state-of-the-art equipment and techniques to:</p>
+<ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+<li>Repair dents, scratches, and collision damage</li>
+<li>Restore vehicle body panels to factory specifications</li>
+<li>Ensure proper panel alignment and gaps</li>
+<li>Maintain structural integrity of your vehicle</li>
+</ul>
+<h4 class="text-xl font-bold mt-6 mb-3">Our Process</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">1. Assessment</h5>
+<p class="text-gray-600">Thorough inspection and damage assessment</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">2. Planning</h5>
+<p class="text-gray-600">Detailed repair plan and cost estimation</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">3. Repair</h5>
+<p class="text-gray-600">Expert panel beating and restoration</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">4. Quality Check</h5>
+<p class="text-gray-600">Final inspection and quality assurance</p>
+</div>
+</div>
+</div>
+`
+},
+'spray-painting': {
+title: 'Spray Painting Services',
+content: `
+<div class="space-y-6">
+<img src="https://readdy.ai/api/search-image?query=professional automotive spray painting in modern paint booth, showing perfect finish on luxury car&width=800&height=400&seq=11&orientation=landscape" alt="Spray Painting" class="w-full h-64 object-cover rounded-lg mb-4">
+<p class="text-gray-600">Our professional spray painting service delivers flawless finishes using premium materials and advanced techniques. We specialize in:</p>
+<ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+<li>Custom color matching and mixing</li>
+<li>Full vehicle resprays</li>
+<li>Partial panel painting</li>
+<li>Clear coat application</li>
+</ul>
+<h4 class="text-xl font-bold mt-6 mb-3">Our Process</h4>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Surface Preparation</h5>
+<p class="text-gray-600">Thorough cleaning and sanding</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Paint Application</h5>
+<p class="text-gray-600">Multiple layers of premium paint</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Finishing</h5>
+<p class="text-gray-600">Clear coat and polishing</p>
+</div>
+</div>
+</div>
+`
+}
+// Add more services here
+};
+function showServiceDetails(button) {
+const serviceType = button.dataset.service;
+const modal = document.getElementById('serviceModal');
+const details = serviceDetails[serviceType];
+if (details) {
+modal.querySelector('.service-title').textContent = details.title;
+modal.querySelector('.service-content').innerHTML = details.content;
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+}
+function closeServiceModal() {
+const modal = document.getElementById('serviceModal');
+modal.classList.add('hidden');
+document.body.style.overflow = '';
+}
+// Close modal when clicking outside
+document.getElementById('serviceModal').addEventListener('click', function(e) {
+if (e.target === this) {
+closeServiceModal();
+}
+});
+</script>
+</div>
+<div class="service-card bg-white p-8 rounded-lg shadow-lg transition-all duration-300">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-hammer-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">Dent Removals</h3>
+<p class="text-gray-600">Specialized dent removal services to restore your vehicle's appearance.</p>
+</div>
+<div id="serviceModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+<div class="bg-white rounded-lg max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl font-bold service-title"></h3>
+<button onclick="closeServiceModal()" class="text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-2x"></i>
+</button>
+</div>
+<div class="service-content"></div>
+</div>
+</div>
+</div>
+<script>
+const serviceDetails = {
+'panel-beating': {
+title: 'Panel Beating Services',
+content: `
+<div class="space-y-6">
+<img src="https://readdy.ai/api/search-image?query=professional panel beater working on car body repair, detailed work in modern workshop, high-end equipment&width=800&height=400&seq=10&orientation=landscape" alt="Panel Beating" class="w-full h-64 object-cover rounded-lg mb-4">
+<p class="text-gray-600">Our panel beating service is a specialized automotive repair process that focuses on restoring damaged vehicle body panels to their original condition. Our certified technicians use state-of-the-art equipment and techniques to:</p>
+<ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+<li>Repair dents, scratches, and collision damage</li>
+<li>Restore vehicle body panels to factory specifications</li>
+<li>Ensure proper panel alignment and gaps</li>
+<li>Maintain structural integrity of your vehicle</li>
+</ul>
+<h4 class="text-xl font-bold mt-6 mb-3">Our Process</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">1. Assessment</h5>
+<p class="text-gray-600">Thorough inspection and damage assessment</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">2. Planning</h5>
+<p class="text-gray-600">Detailed repair plan and cost estimation</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">3. Repair</h5>
+<p class="text-gray-600">Expert panel beating and restoration</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">4. Quality Check</h5>
+<p class="text-gray-600">Final inspection and quality assurance</p>
+</div>
+</div>
+</div>
+`
+},
+'spray-painting': {
+title: 'Spray Painting Services',
+content: `
+<div class="space-y-6">
+<img src="https://readdy.ai/api/search-image?query=professional automotive spray painting in modern paint booth, showing perfect finish on luxury car&width=800&height=400&seq=11&orientation=landscape" alt="Spray Painting" class="w-full h-64 object-cover rounded-lg mb-4">
+<p class="text-gray-600">Our professional spray painting service delivers flawless finishes using premium materials and advanced techniques. We specialize in:</p>
+<ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+<li>Custom color matching and mixing</li>
+<li>Full vehicle resprays</li>
+<li>Partial panel painting</li>
+<li>Clear coat application</li>
+</ul>
+<h4 class="text-xl font-bold mt-6 mb-3">Our Process</h4>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Surface Preparation</h5>
+<p class="text-gray-600">Thorough cleaning and sanding</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Paint Application</h5>
+<p class="text-gray-600">Multiple layers of premium paint</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Finishing</h5>
+<p class="text-gray-600">Clear coat and polishing</p>
+</div>
+</div>
+</div>
+`
+}
+// Add more services here
+};
+function showServiceDetails(button) {
+const serviceType = button.dataset.service;
+const modal = document.getElementById('serviceModal');
+const details = serviceDetails[serviceType];
+if (details) {
+modal.querySelector('.service-title').textContent = details.title;
+modal.querySelector('.service-content').innerHTML = details.content;
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+}
+function closeServiceModal() {
+const modal = document.getElementById('serviceModal');
+modal.classList.add('hidden');
+document.body.style.overflow = '';
+}
+// Close modal when clicking outside
+document.getElementById('serviceModal').addEventListener('click', function(e) {
+if (e.target === this) {
+closeServiceModal();
+}
+});
+</script>
+</div>
+<div class="service-card bg-white p-8 rounded-lg shadow-lg transition-all duration-300">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-fire-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">CO2 Welding</h3>
+<p class="text-gray-600">Professional CO2 welding services for structural repairs.</p>
+</div>
+<div id="serviceModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+<div class="bg-white rounded-lg max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl font-bold service-title"></h3>
+<button onclick="closeServiceModal()" class="text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-2x"></i>
+</button>
+</div>
+<div class="service-content"></div>
+</div>
+</div>
+</div>
+<script>
+const serviceDetails = {
+'panel-beating': {
+title: 'Panel Beating Services',
+content: `
+<div class="space-y-6">
+<img src="https://readdy.ai/api/search-image?query=professional panel beater working on car body repair, detailed work in modern workshop, high-end equipment&width=800&height=400&seq=10&orientation=landscape" alt="Panel Beating" class="w-full h-64 object-cover rounded-lg mb-4">
+<p class="text-gray-600">Our panel beating service is a specialized automotive repair process that focuses on restoring damaged vehicle body panels to their original condition. Our certified technicians use state-of-the-art equipment and techniques to:</p>
+<ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+<li>Repair dents, scratches, and collision damage</li>
+<li>Restore vehicle body panels to factory specifications</li>
+<li>Ensure proper panel alignment and gaps</li>
+<li>Maintain structural integrity of your vehicle</li>
+</ul>
+<h4 class="text-xl font-bold mt-6 mb-3">Our Process</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">1. Assessment</h5>
+<p class="text-gray-600">Thorough inspection and damage assessment</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">2. Planning</h5>
+<p class="text-gray-600">Detailed repair plan and cost estimation</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">3. Repair</h5>
+<p class="text-gray-600">Expert panel beating and restoration</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">4. Quality Check</h5>
+<p class="text-gray-600">Final inspection and quality assurance</p>
+</div>
+</div>
+</div>
+`
+},
+'spray-painting': {
+title: 'Spray Painting Services',
+content: `
+<div class="space-y-6">
+<img src="https://readdy.ai/api/search-image?query=professional automotive spray painting in modern paint booth, showing perfect finish on luxury car&width=800&height=400&seq=11&orientation=landscape" alt="Spray Painting" class="w-full h-64 object-cover rounded-lg mb-4">
+<p class="text-gray-600">Our professional spray painting service delivers flawless finishes using premium materials and advanced techniques. We specialize in:</p>
+<ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+<li>Custom color matching and mixing</li>
+<li>Full vehicle resprays</li>
+<li>Partial panel painting</li>
+<li>Clear coat application</li>
+</ul>
+<h4 class="text-xl font-bold mt-6 mb-3">Our Process</h4>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Surface Preparation</h5>
+<p class="text-gray-600">Thorough cleaning and sanding</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Paint Application</h5>
+<p class="text-gray-600">Multiple layers of premium paint</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Finishing</h5>
+<p class="text-gray-600">Clear coat and polishing</p>
+</div>
+</div>
+</div>
+`
+}
+// Add more services here
+};
+function showServiceDetails(button) {
+const serviceType = button.dataset.service;
+const modal = document.getElementById('serviceModal');
+const details = serviceDetails[serviceType];
+if (details) {
+modal.querySelector('.service-title').textContent = details.title;
+modal.querySelector('.service-content').innerHTML = details.content;
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+}
+function closeServiceModal() {
+const modal = document.getElementById('serviceModal');
+modal.classList.add('hidden');
+document.body.style.overflow = '';
+}
+// Close modal when clicking outside
+document.getElementById('serviceModal').addEventListener('click', function(e) {
+if (e.target === this) {
+closeServiceModal();
+}
+});
+</script>
+</div>
+<div class="service-card bg-white p-8 rounded-lg shadow-lg transition-all duration-300">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-brush-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">Touch Ups & Polishing</h3>
+<p class="text-gray-600">Minor repairs and professional polishing to maintain your vehicle's shine.</p>
+</div>
+<div id="serviceModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+<div class="bg-white rounded-lg max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl font-bold service-title"></h3>
+<button onclick="closeServiceModal()" class="text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-2x"></i>
+</button>
+</div>
+<div class="service-content"></div>
+</div>
+</div>
+</div>
+<script>
+const serviceDetails = {
+'panel-beating': {
+title: 'Panel Beating Services',
+content: `
+<div class="space-y-6">
+<img src="https://readdy.ai/api/search-image?query=professional panel beater working on car body repair, detailed work in modern workshop, high-end equipment&width=800&height=400&seq=10&orientation=landscape" alt="Panel Beating" class="w-full h-64 object-cover rounded-lg mb-4">
+<p class="text-gray-600">Our panel beating service is a specialized automotive repair process that focuses on restoring damaged vehicle body panels to their original condition. Our certified technicians use state-of-the-art equipment and techniques to:</p>
+<ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+<li>Repair dents, scratches, and collision damage</li>
+<li>Restore vehicle body panels to factory specifications</li>
+<li>Ensure proper panel alignment and gaps</li>
+<li>Maintain structural integrity of your vehicle</li>
+</ul>
+<h4 class="text-xl font-bold mt-6 mb-3">Our Process</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">1. Assessment</h5>
+<p class="text-gray-600">Thorough inspection and damage assessment</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">2. Planning</h5>
+<p class="text-gray-600">Detailed repair plan and cost estimation</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">3. Repair</h5>
+<p class="text-gray-600">Expert panel beating and restoration</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">4. Quality Check</h5>
+<p class="text-gray-600">Final inspection and quality assurance</p>
+</div>
+</div>
+</div>
+`
+},
+'spray-painting': {
+title: 'Spray Painting Services',
+content: `
+<div class="space-y-6">
+<img src="https://readdy.ai/api/search-image?query=professional automotive spray painting in modern paint booth, showing perfect finish on luxury car&width=800&height=400&seq=11&orientation=landscape" alt="Spray Painting" class="w-full h-64 object-cover rounded-lg mb-4">
+<p class="text-gray-600">Our professional spray painting service delivers flawless finishes using premium materials and advanced techniques. We specialize in:</p>
+<ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+<li>Custom color matching and mixing</li>
+<li>Full vehicle resprays</li>
+<li>Partial panel painting</li>
+<li>Clear coat application</li>
+</ul>
+<h4 class="text-xl font-bold mt-6 mb-3">Our Process</h4>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Surface Preparation</h5>
+<p class="text-gray-600">Thorough cleaning and sanding</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Paint Application</h5>
+<p class="text-gray-600">Multiple layers of premium paint</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h5 class="font-bold mb-2">Finishing</h5>
+<p class="text-gray-600">Clear coat and polishing</p>
+</div>
+</div>
+</div>
+`
+}
+// Add more services here
+};
+function showServiceDetails(button) {
+const serviceType = button.dataset.service;
+const modal = document.getElementById('serviceModal');
+const details = serviceDetails[serviceType];
+if (details) {
+modal.querySelector('.service-title').textContent = details.title;
+modal.querySelector('.service-content').innerHTML = details.content;
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+}
+function closeServiceModal() {
+const modal = document.getElementById('serviceModal');
+modal.classList.add('hidden');
+document.body.style.overflow = '';
+}
+// Close modal when clicking outside
+document.getElementById('serviceModal').addEventListener('click', function(e) {
+if (e.target === this) {
+closeServiceModal();
+}
+});
+</script>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20">
+<div class="max-w-7xl mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Why Choose Us</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">With over 25 years of experience, we deliver excellence in every repair.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="text-center">
+<div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-shield-check-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Certified Experts</h3>
+<p class="text-gray-600">Factory-trained technicians with industry certifications</p>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-timer-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Quick Service</h3>
+<p class="text-gray-600">Fast turnaround without compromising quality</p>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-medal-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Warranty</h3>
+<p class="text-gray-600">Lifetime warranty on all workmanship</p>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-money-dollar-circle-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Best Price</h3>
+<p class="text-gray-600">Competitive pricing with no hidden costs</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Recent Projects</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Take a look at some of our recent restoration projects.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img src="golf.jpg" alt="Project 1" class="w-full h-64 object-cover">
+<div class="p-6 bg-white">
+    <h3 class="text-xl font-bold mb-2">VW GTI</h3>
+<p class="text-gray-600">Complete body restoration and paint correction</p>
+</div>
+</div>
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img src="done.jpg" alt="Project 2" class="w-full h-64 object-cover">
+<div class="p-6 bg-white">
+<h3 class="text-xl font-bold mb-2">Nissan hard body</h3>
+<p class="text-gray-600">Accident repair and panel replacement</p>
+</div>
+</div>
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img src="paint.jpg " alt="Project 3" class="w-full h-64 object-cover">
+<div class="p-6 bg-white">
+<h3 class="text-xl font-bold mb-2">Truck Paint Job</h3>
+<p class="text-gray-600">Custom paint work and ceramic coating</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20">
+<div class="max-w-7xl mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Customer Testimonials</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Don't just take our word for it - hear what our customers have to say.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="testimonial-card bg-white p-8 rounded-lg shadow-lg transition-all duration-300">
+<div class="flex items-center mb-4">
+<div class="text-yellow-400 flex">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Exceptional service from start to finish. They restored my Nissan Van to better than new condition after a serious accident. Highly recommended!"</p>
+<div class="flex items-center">
+<div class="flex-1">
+<h4 class="font-bold">Mr Nkombi</h4>
+<p class="text-gray-500">Nissan Owner</p>
+</div>
+</div>
+</div>
+<div class="testimonial-card bg-white p-8 rounded-lg shadow-lg transition-all duration-300">
+<div class="flex items-center mb-4">
+<div class="text-yellow-400 flex">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Professional team with attention to detail. The paint match on my GTI was perfect. Great communication throughout the process."</p>
+<div class="flex items-center">
+<div class="flex-1">
+<h4 class="font-bold"> Mr Chiwanga</h4>
+<p class="text-gray-500">VW GTI  Owner</p>
+</div>
+</div>
+</div>
+<div class="testimonial-card bg-white p-8 rounded-lg shadow-lg transition-all duration-300">
+<div class="flex items-center mb-4">
+<div class="text-yellow-400 flex">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Fast, efficient, and fairly priced. They handled my insurance claim seamlessly and delivered outstanding results. Will definitely return!"</p>
+<div class="flex items-center">
+<div class="flex-1">
+<h4 class="font-bold">Miss Khuzwayo</h4>
+<p class="text-gray-500">Audi Owner</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-primary text-white">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-4xl font-bold mb-6">CALL US TODAY FOR A QUOTE</h2>
+<div class="contact-section">
+    <p>Phone now to get an estimate and secure your booking</p>
+
+    <a href="tel:27614774406" style="color: #007BFF; font-size: 18px; text-decoration: none;">
+        📞 Call Us: 061 477 4406
+    </a>
+    </div>
+   <div class="image-right">
+            <img src="call.jpg" alt="Broken Windscreen">
+<button class="bg-white text-primary px-8 py-3 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap cursor-pointer">
+Call Now
+</button>
+<button class="border-2 border-white text-white px-8 py-3 !rounded-button hover:bg-white hover:text-primary transition-all duration-300 whitespace-nowrap cursor-pointer">
+Learn More
+</button>
+</div>
+</div>
+<div class="relative">
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-gray-900 text-white py-16">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div>
+<h3 class="text-2xl font-['Pacifico'] mb-6">Avishal PanelBeaters</h3>
+<p class="text-gray-400 mb-6">Avishals Panel Beaters- Your trusted partner in Panel Beating and vehicle repair .</p>
+<div class="flex space-x-4">
+<a href="https://www.facebook.com/share/16FA7Eibd9/?mibextid=wwXIfr" class="w-10 h-10 flex items-center justify-center bg-primary !rounded-full hover:bg-opacity-90 transition-all duration-300 cursor-pointer">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="https://wa.me/27746068905" class="w-10 h-10 flex items-center justify-center bg-primary !rounded-full hover:bg-opacity-90 transition-all duration-300 cursor-pointer">
+<i class="ri-whatsapp-fill"></i>
+</a>
+<a href="https://www.instagram.com/avishals_panelbeaters?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="w-10 h-10 flex items-center justify-center bg-primary !rounded-full hover:bg-opacity-90 transition-all duration-300 cursor-pointer">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Quick Links</h3>
+<ul class="space-y-4">
+<li><a href="About.html" class="text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
+<li><a href="#Services" class="text-gray-400 hover:text-white transition-colors duration-300">Services</a></li>
+<li><a href="Gallery.html" class="text-gray-400 hover:text-white transition-colors duration-300">Gallery</a></li>
+<li><a href="About.html#Contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Services</h3>
+<ul class="space-y-4">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Panel Beating</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Spray Painting</a></li>
+<i><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Accident Repair</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Paint Protection</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Contact Info</h3>
+<ul class="space-y-4">
+<li class="flex items-center">
+<i class="ri-map-pin-line mr-3"></i>
+<p class="map-link" href="https://www.google.com/maps/place/17+Quilter+Pl,+Woodlands,+Durban,+4004" target="_blank"></p>
+   <p> <span class="text-gray-400"> 17 Quilter Pl Woodlands, Durban, 4004 South Africa</span></p>
+</li>
+<li class="flex items-center">
+<i class="ri-phone-line mr-3"></i>
+<span class="text-gray-400">+27 74 606 8905</span>
+</li>
+<li class="flex items-center">
+<i class="ri-mail-line mr-3"></i>
+<span class="text-gray-400">denverantony9@gmail.com</span>
+</li>
+<li class="flex items-center">
+<i class="ri-time-line mr-3"></i>
+<span class="text-gray-400">Mon-Fri: 8:00 AM - 4:30 PM</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center">
+<p class="text-gray-400">&copy; 2025 Avishals Panel Beaters. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.querySelector('button.md\\:hidden');
+const nav = document.querySelector('nav');
+mobileMenuButton.addEventListener('click', function() {
+nav.classList.toggle('hidden');
+nav.classList.toggle('flex');
+nav.classList.toggle('flex-col');
+nav.classList.toggle('absolute');
+nav.classList.toggle('top-16');
+nav.classList.toggle('left-0');
+nav.classList.toggle('right-0');
+nav.classList.toggle('bg-white');
+nav.classList.toggle('p-4');
+nav.classList.toggle('shadow-lg');
+});
+const backToTop = document.createElement('button');
+backToTop.innerHTML = '<i class="ri-arrow-up-line"></i>';
+backToTop.className = 'fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg cursor-pointer hover:bg-opacity-90 transition-all duration-300 opacity-0';
+document.body.appendChild(backToTop);
+window.addEventListener('scroll', function() {
+if (window.pageYOffset > 100) {
+backToTop.style.opacity = '1';
+} else {
+backToTop.style.opacity = '0';
+}
+});
+backToTop.addEventListener('click', function() {
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+});
+</script>
+</body>
+</html>
